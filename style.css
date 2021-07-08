@@ -1,0 +1,134 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-decoration: none;
+}
+
+body {
+  background-color: black;
+}
+
+header {
+  margin: 20px auto;
+  width: 70%;
+}
+
+.flex-justify {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+
+.border-black {
+  border: 1px solid black;
+}
+
+.instruction {
+  color: rgba(240, 248, 255, 0.797);
+  font-size: 16px;
+  text-align: center;
+}
+
+#canva {
+  margin-top: 10vh;
+}
+
+.color-pallete {
+  display: flex;
+  margin: 0 0 3rem 0;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.color {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  opacity: 0.7;
+  transition: opacity .2s;
+}
+
+.color:hover {
+  opacity: 1;
+}
+
+.black {
+  background-color: black;
+  color: black;
+}
+
+.orange {
+  background-color: orangered;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.purple {
+  background-color: darkorchid;
+}
+
+.green {
+  background-color: chartreuse;
+}
+
+.blue {
+  background-color: dodgerblue;
+}
+
+.white {
+  color: aliceblue;
+}
+
+.pixel-board {
+  display: grid;
+  justify-content: center;
+  margin: 10vh auto;
+  width: 70%;
+  grid-template-columns: minmax(3rem, max-content) repeat(auto-fill, 3rem);
+}
+
+.pixel {
+  border: 1px solid rgba(151, 226, 247, 0.236);
+  height: 3rem;
+  width: 3rem;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.container {
+  width: 50%;
+  margin: 30px auto;
+  text-align: center;
+}
+
+#board-size {
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  border-radius: 2px;
+  width: 30vw;
+  height: 5px;
+  opacity: 0.7;
+  background-color: aliceblue;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+#board-size:hover {
+  opacity: 1;
+}
+
+#board-size::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 2px;
+  background-color: deeppink;
+  cursor: pointer;
+}

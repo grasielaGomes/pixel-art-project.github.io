@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixel Art | Project</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" async></script>
+</head>
+<body>
+  <header class="flex-justify">
+    <div>
+      <img src="./assets/logo.svg" alt="Pixel art logo" height="90px">
+    </div>
+    <div class="flex-justify">
+      <div class="flex-justify">
+        <img src="./assets/click.gif" alt="Click here animations" height="40px">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdo3QuY35Q1PUDUibjmd2ruRh_EoJOEm29xrqin7GEg5UFHUw/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer">
+          <h3 class="white"><span class="orange"> Nos ajude</span> a melhorar!</h3>
+        </a>
+      </div>
+      <div>
+        <a href="https://github.com/grasielaGomes" target="_blank" rel="noopener noreferrer">
+          <img src="./assets/github.svg" alt="Logo linkedin" height="40px" class="pixel-git">
+        </a>
+      </div>
+      <div>
+        <a href="https://www.linkedin.com/in/grasisilva/" target="_blank" rel="noopener noreferrer">
+          <img src="./assets/linkedin.svg" alt="Logo linkedin" height="40px" class="pixel-logo">
+        </a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section id="canva">
+      <header class="instruction">
+        <p id="select-color"></p>
+      </header>
+      <section class="color-pallete">
+        <div class="color black">
+          <img src="./assets/erase.svg" alt="erase color" height="40px" class="erase">
+        </div>
+        <div class="color orange"></div>
+        <div class="color yellow"></div>
+        <div class="color purple"></div>
+        <div class="color green"></div>
+        <div class="color blue"></div>
+        <div class="color black">
+          <img src="./assets/delete.svg" alt="erase all colors" height="40px" id="clear-all">
+        </div>
+      </section>
+      <section class="container">
+        <p class="instruction">Arraste e adicione pixels à tela</p>
+        <input type="range" min="0" max="600" value="0" step: 1 name="board-size" id="board-size">
+      </section>
+      <div class="pixel-board">
+      </div>
+    </section>
+  </main>
+</body>
+</html>

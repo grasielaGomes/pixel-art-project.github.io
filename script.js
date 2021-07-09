@@ -4,43 +4,48 @@ window.onload = function () {
   getPalleteEvent();
   getClearButtonEvent();
 }
+const slider = document.getElementById("board-size");
+const grid = document.querySelector(".pixel-board");
+const clearButton = document.querySelector("#clear-all");
+const instruction = document.querySelector("#select-color");
+const colors = document.querySelectorAll(".color");
+
 
 function inputValueRange () {
-  const slider = document.getElementById("board-size");
   slider.oninput = function () {
-    const pixels = document.querySelectorAll(".pixel");
     let value = parseInt(slider.value);
-    pixels.length >= value
-      ? deletePixel(pixels.length - value)
-      : createPixel(value)
-
-    const instruction = document.querySelector("#select-color");
-    if (value > 0) {
-      instruction.innerHTML = "Escolha uma cor para pintar os pixels ou apague as cores aplicadas";
-    } else {
-      instruction.innerHTML = "";
-    }
+    let pixels = document.querySelectorAll(".pixel");
+    console.log(`slider: ${value}`);
+    value === 0 
+    ? deletePixel(pixels.length)
+    : createPixel(value)
+    setInstruction(value);
   }
 }
 
-function createPixel (value) {
-  const grid = document.querySelector(".pixel-board");
-  let gridItem = document.createElement("div");
+function createPixel(value) {
   for (let i = 0; i < value; i += 1) {
+    let gridItem = document.createElement("div");
     gridItem.className = "pixel";
     grid.appendChild(gridItem);
   }
 }
 
-function deletePixel (value) {
-  const grid = document.querySelector(".pixel-board");
-  for (let i = value; i > 0; i -= 1) {
+function deletePixel(value) {
+  for (let i = 0; i < value; i++) {
     grid.lastElementChild.remove();
   }
 }
 
+function setInstruction(value) {
+  if (value > 0) {
+    instruction.innerHTML = "Escolha uma cor para pintar os pixels ou apague as cores aplicadas";
+  } else {
+    instruction.innerHTML = "";
+  }
+}
+
 function getPalleteEvent () {
-  const colors = document.querySelectorAll(".color");
   for (let color of colors) {
     color.addEventListener("click", (evt) => {
       let className = evt.target.className;
@@ -71,12 +76,11 @@ function changePixelBackgroundColor (color) {
 }
 
 function getClearButtonEvent() {
-  const clearButton = document.querySelector("#clear-all");
   clearButton.addEventListener("click", clearAllBackgroundColors);
 }
 
 function clearAllBackgroundColors(){
-  const pixels = document.querySelectorAll(".pixel");
+  let pixels = document.querySelectorAll(".pixel");
   for(let pixel of pixels) {
     pixel.style.backgroundColor = "black";
   }

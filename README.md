@@ -12,7 +12,7 @@ Pixel Art é um webpage em HTML, CSS e JavaScript vanilla desenvolvida como proj
 O projeto consiste em uma página web onde, o usuário, é capaz de determinar o tamanho de um canva e criar sua própia pixel art.
 
 ## Layout web
-![Web 1](https://github.com/acenelio/assets/raw/main/sds1/web1.png)
+![Web 1](https://github.com/grasielaGomes/pixelartproject/blob/2d1048b96c5f5e6e86f9bea374ae692d24f5ab97/assets/snapshot.png)
 
 # Tecnologias utilizadas
 ## Front end

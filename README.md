@@ -1,6 +1,5 @@
 # Pixel Art | Project
 
-# Sobre o projeto
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/grasielaGomes/pixel-art-project/blob/master/LICENSE)
 
 # Sobre o projeto
